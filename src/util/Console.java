@@ -76,7 +76,7 @@ public class Console {
 		return d;
 	}
 	
-    public static String getRequiredString(Scanner sc, String prompt) {
+    public static String getRequiredString(String prompt) {
         String s = "";
         boolean isValid = false;
         while (!isValid) {
@@ -91,12 +91,11 @@ public class Console {
         return s;
     }
 
-    public static String getChoiceString(Scanner sc, String prompt,
-            String s1, String s2) {
+    public static String getChoiceString(String prompt, String s1, String s2) {
         String s = "";
         boolean isValid = false;
         while (!isValid) {
-            s = getRequiredString(sc, prompt);
+            s = getRequiredString(prompt);
             if (!s.equalsIgnoreCase(s1) && !s.equalsIgnoreCase(s2)) {
                 System.out.println("Error! Entry must be '" + s1 + "' or '" + s2 + "'. Try again.");
             } else {
@@ -113,6 +112,9 @@ public class Console {
 			n = getInt(prompt);
 			if (n != i && n != j && n != k && n != l && n != m) {
 				System.out.println("Error! Entry must be " + i + " or " + j + " or " + k + " or " + l + " or " + m + "Try again.");
+			}
+			else {
+				isValid = true;
 			}
 		}
 		return n;
