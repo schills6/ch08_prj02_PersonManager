@@ -16,7 +16,6 @@ public class Employee extends Person {
 
 	public String getSsn() {
 		StringBuilder maskedSsn = new StringBuilder(ssn);
-		String last4 = maskedSsn.substring(7);
 		maskedSsn.replace(0,6,"xxx-xx");
 		return maskedSsn.toString();
 	}

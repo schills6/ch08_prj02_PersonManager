@@ -14,8 +14,8 @@ public class PersonManagerApp {
 
 		System.out.println("Welcome to the Person Manager\n");
 		String choice = "y";
-		ArrayList<Person> people = new ArrayList<>();
 		while (choice.equalsIgnoreCase("y")) {
+			ArrayList<Person> people = new ArrayList<>();
 			String personChoice = Console.getRequiredString("Create customer or employee? (c/e): ");
 			
 			switch (personChoice) {
@@ -67,4 +67,12 @@ public class PersonManagerApp {
 		Employee e = new Employee(employeeFirst, employeeLast, employeeSSN);
 		return e;
 	}
+	
+	/*public static Person findPerson() {
+		Person p = new Person();
+		String searchNumber = Console.getString("Enter customer number or employee SSN: ")
+		if (people.contains(searchNumber)) {
+			
+		}
+	}*/
 }
